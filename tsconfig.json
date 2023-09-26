@@ -2,11 +2,11 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "verbatimModuleSyntax": true,
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@components/*": ["../src/components/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@assets/*": ["src/assets/*"]
+      "@components/*": ["components/*"],
+      "@layouts/*": ["layouts/*"],
+      "@assets/*": ["assets/*"]
     }
   }
 }
