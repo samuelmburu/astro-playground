@@ -84,3 +84,15 @@ h1 {
   }
 }
 /* end nav styles */
+
+.tag-list {
+  display: inline;
+  padding-left: 0px;
+  position: relative;
+}
+
+.tag-list li {
+  display: inline;
+  padding: 0 10px;
+  color: #999
+}
