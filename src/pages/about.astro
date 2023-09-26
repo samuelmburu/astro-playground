@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
-import Navigation from '@components/Navigation.astro';
 import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
 
 const pageTitle = "About Me";
 
@@ -31,9 +31,9 @@ const textCase = "uppercase";
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
         <style define:vars={{skillColor, fontWeight, textCase}}>
-            h1 {
+                h1 {
                 color: purple;
-                font-size: 4rem;
+                font-size:4rem;
             }
             .skill {
                 color: var(--skillColor);
@@ -43,9 +43,8 @@ const textCase = "uppercase";
         </style>
 	</head>
 	<body>
-        <Navigation />
-
-		<h1>{pageTitle}</h1>
+        <Header />
+        <h1>{pageTitle}</h1>
 		<h2>... and my new Astro site!</h2>
         <p>I am working through Astro's introductory tutorial. This is the second page on the website and the first one I built myself!</p>
         <p>This site will update as I complete more of the tutorial, so keep checking back and see how my jouney is going!</p>
