@@ -2,23 +2,16 @@
 import CMS from 'decap-cms-app';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <title>Content Manager</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@^2.0.0/dist/cms.css" />
 </head>
 <body>
-'test copy'
-    <!-- <script is:inline>
-        // Init CMS object
-        CMS.init();
-        // Now the registry is available via the CMS object
-        CMS.registerPreviewTemplate('my-template', 'my-template')
-    </script> -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" is:inline></script>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js" is:inline></script>
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </body>
 </html>
