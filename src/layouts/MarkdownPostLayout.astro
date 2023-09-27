@@ -1,16 +1,19 @@
 ---
 import '../styles/global.css';
+import BaseLayout from '@layouts/BaseLayout.astro';
 const { frontmatter } = Astro.props;
+const pageTitle = frontmatter.title;
 ---
-<h1>{frontmatter.title}</h1>
-<p>Published on: {frontmatter.pubDate.slice(0,10)}</p>
-<p>Written by {frontmatter.author}</p>
-<p><em>{frontmatter.description}</em></p>
-<img src={frontmatter.image.url} alt={frontmatter.image.alt} width="300" />
-<slot />
-<div>
-    tags:
-    <ul class="tag-list" style="display: inline;color=#999">
-        {frontmatter.tags.map((tag)=> <li class="tag-item">{tag}</li> )}
-    </ul>
-</div>
+<BaseLayout pageTitle={pageTitle} outerTitle="Blog">
+    <p>Published on: {frontmatter.pubDate.slice(0,10)}</p>
+    <p>Written by {frontmatter.author}</p>
+    <p><em>{frontmatter.description}</em></p>
+    <img src={frontmatter.image.url} alt={frontmatter.image.alt} width="300" />
+    <slot />
+    <div>
+        tags:
+        <ul class="tag-list" style="display: inline;color=#999">
+            {frontmatter.tags.map((tag)=> <li class="tag-item">{tag}</li> )}
+        </ul>
+    </div>
+</BaseLayout>
