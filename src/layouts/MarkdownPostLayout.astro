@@ -9,11 +9,15 @@ const pageTitle = frontmatter.title;
     <p>Written by {frontmatter.author}</p>
     <p><em>{frontmatter.description}</em></p>
     <img src={frontmatter.image.url} alt={frontmatter.image.alt} width="300" />
-    <slot />
     <div>
         tags:
         <ul class="tag-list" style="display: inline;color=#999">
-            {frontmatter.tags.map((tag)=> <li class="tag-item">{tag}</li> )}
+            {frontmatter.tags.map((tag)=> (
+                <li class="tag-item">
+                    <a href={`/tags/${tag}`}>{tag}</a>
+                </li>
+            ))}
         </ul>
     </div>
+    <slot />
 </BaseLayout>
