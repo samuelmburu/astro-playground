@@ -1,9 +1,16 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import Greeting from '@components/Greetings';
 const pageTitle = "Home";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<h2>My Astro Site</h2>
+	<!-- // client:load "hydrates" the component making it 'live' on load -->
+	<!-- // client:visible "hydrates" the component when it is in view on the page -->
+	<!-- // client:only={FRAMEWORK} won't render on the server, but will render on the client once the page loads -->
+	<!-- // client:media={QUERY} won't render on the server, but will render on the client once the page loads -->
+	<!-- // client:idle won't render on the server, but will render on the client once the page loads -->
+	<Greeting client:visible messages={['Hej', 'Hallo','Hola','Habari']} />
 </BaseLayout>
 

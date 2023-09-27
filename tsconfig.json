@@ -4,10 +4,20 @@
     "verbatimModuleSyntax": true,
     "baseUrl": "src",
     "paths": {
-      "@components/*": ["components/*"],
-      "@layouts/*": ["layouts/*"],
-      "@scripts/*": ["scripts/*"],
-      "@assets/*": ["assets/*"]
-    }
+      "@components/*": [
+        "components/*"
+      ],
+      "@layouts/*": [
+        "layouts/*"
+      ],
+      "@scripts/*": [
+        "scripts/*"
+      ],
+      "@assets/*": [
+        "assets/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
   }
 }
