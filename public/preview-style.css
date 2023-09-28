@@ -1,0 +1,27 @@
+html {
+  padding: 15px;
+  display: block;
+  background-color: rgb(240, 240, 241);
+}
+
+html,
+body {
+  color: #444;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  /* background-color: var(--background);
+   */
+  }
+
+body {
+  background: #fff;
+  padding: 20px;
+  max-width: 100%;
+
+  img {
+    max-width: 100% !important;
+    object-fit: contain;
+  }
+}
+

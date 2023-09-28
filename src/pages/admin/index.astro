@@ -1,19 +1,8 @@
 ---
-// import CMS from 'decap-cms-app';
-import configURL from  '/config.yml?url';
-
-// console.log('config', import.meta.glob(configURL))
-export async function getStaticPaths() {
-  const config = await Astro.glob('./config.yml?raw');
-  // const config = await Astro.glob('./config.txt');
-console.log('the meta', {config})
-  return ({params:{url}, props:{url: config}});
-}
-
-const {url} = Astro.props;
-const {url:m} = Astro.params;
+// NOTE: these live in "/public/"
+const configURL = '/config.yml';
+const previewStylesURL = '/preview-style.css';
 ---
-{JSON.stringify(configURL, null, 2)}
 
 
 <!doctype html>
@@ -27,7 +16,11 @@ const {url:m} = Astro.params;
   <link href={configURL} type="text/yaml" rel="cms-config-url">
 </head>
 <body>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" is:inline></script>
   <!-- Include the script that builds the page and powers Decap CMS -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script is:inline src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script is:inline define:vars={{previewStylesURL}}>
+    CMS.registerPreviewStyle(previewStylesURL)
+  </script>
 </body>
 </html>
