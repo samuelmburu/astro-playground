@@ -6,6 +6,11 @@ pubDate: 2023-09-29T02:25:36.529Z
 image:
   url: https://decapcms.org/img/decap-logo.svg
   alt: De-cap logo
+tags:
+  - astro
+  - learning%20in%20public
+  - setbacks
+  - community
 ---
 A decapitated CMS....
 
