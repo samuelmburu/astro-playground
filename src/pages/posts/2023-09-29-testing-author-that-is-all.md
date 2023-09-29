@@ -1,7 +1,7 @@
 ---
 layout: "@layouts/MarkdownPostLayout.astro"
 title: testing author that is all
-description: tetsing author
+description: tetsing author -- again
 pubDate: 2023-09-29T03:09:04.696Z
 author:
   ? "{ user }"
