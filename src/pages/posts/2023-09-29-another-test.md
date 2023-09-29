@@ -8,7 +8,7 @@ image:
   alt: De-cap logo
 tags:
   - astro
-  - learning%20in%20public
+  - learning in public
   - setbacks
   - community
 ---
