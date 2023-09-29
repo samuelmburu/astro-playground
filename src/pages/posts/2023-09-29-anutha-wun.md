@@ -2,7 +2,7 @@
 layout: "@layouts/MarkdownPostLayout.astro"
 title: UH-nutha' wun
 description: dj khaled says there another wun
-pubDate: 2023-09-29T03:05:10.259Z
+pubDate: 2023-09-29T03:22:55.939Z
 author: "{{user}}"
 image:
   url: https://c.tenor.com/8DMbMRne15gAAAAM/whoo-hoo-yeah.gif
