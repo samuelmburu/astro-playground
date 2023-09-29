@@ -1,6 +1,6 @@
 ---
 layout: "@layouts/MarkdownPostLayout.astro"
-title: anutha' wun
+title: UH-nutha' wun
 description: dj khaled says there another wun
 pubDate: 2023-09-29T03:05:10.259Z
 author: "{{user}}"
