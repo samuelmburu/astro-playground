@@ -22,7 +22,9 @@
 
 # Request bots not to index the admin section.
 [[headers]]
+  # Define which paths this specific [[headers]] block will cover.
   for = "/admin/*"
+
   [headers.values]
-    X-Robots-Tag = "noindex" 
+    X-Robots-Tag = "noindex"
 
