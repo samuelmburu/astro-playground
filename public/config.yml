@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: add-decap
+  repo: samuelmburu/astro-playground
+  preview_path: blog/{{slug}}
 publish_mode: editorial_workflow
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 locale: "en-US"
