@@ -1,8 +1,9 @@
 ---
-layout: "@layouts/MarkdownPostLayout.astro"
-title: another test
+layout: '@layouts/MarkdownPostLayout.astro'
+title: "Another test"
+author: Samuel
 description: this is another test of the broadcast system
-pubDate: 2023-09-29T02:25:36.529Z
+pubDate: 2023-09-29
 image:
   url: https://decapcms.org/img/decap-logo.svg
   alt: De-cap logo

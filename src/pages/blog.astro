@@ -1,8 +1,11 @@
 ---
+// import {getCollection, getEntries} from 'astro:content';
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BlogPost from "@components/BlogPost.astro";
-const allPosts = await Astro.glob('../pages/posts/*.md');
-
+const allPosts = await Astro.glob('/src/pages/posts/*.md{,x}');
+// ALERT: not sure why this isn't working
+// const allPosts = await getEntries('blog');
+console.log('__allPosts', typeof allPosts)
 const pageTitle = "Blog";
 ---
 <BaseLayout pageTitle={pageTitle}>

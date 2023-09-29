@@ -5,16 +5,19 @@ publish_mode: editorial_workflow
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 locale: "en-US"
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Post" # Used in the UI
-    folder: "/src/pages/posts" # The path to the folder where the documents are stored
+  - identifier_field: title
+    name: 'blog' # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
+    label_singular: "Post"
+    folder: "/src/pages/posts/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "@layouts/MarkdownPostLayout.astro"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Short Description", name: "description", widget: "string"}
       - {label: "Publish Date", name: pubDate, widget: "datetime"}
+      - {label: "Author", name: author, widget: "hidden", default: {{user}}}
       - label: "Featured Image"
         name: "image"
         widget: "object"
@@ -22,8 +25,11 @@ collections:
         fields:
         - {label: "url", name: "url", widget: "image", default: "url"}
         - {label: "alt", name: "alt", widget: "string"}
-      # - label: "Tags"
-      #   name: "Tags"
+      - label: "Tags"
+        name: "tags"
+        widget: list
+        default: ["blogging"]
+        # multiple: true
       #   widget: "select"
       #   multiple: true}
       #   options:
