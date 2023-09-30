@@ -1,13 +1,24 @@
 ---
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+
 import '../styles/global.css';
 import BaseLayout from '@layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
 const { frontmatter } = Astro.props;
 const pageTitle = frontmatter.title;
+
+dayjs.extend(utc);
+
+const lastModified = dayjs()
+    .utc(frontmatter.lastModified)
+    .format('HH:mm:ss DD MMMM YYYY UTC');
 ---
 <BaseLayout pageTitle={pageTitle} outerTitle="Blog">
-    <p>Published on: {frontmatter.pubDate.slice(0,10)}</p>
-    <p>Written by {frontmatter.author}</p>
-    <p><em>{frontmatter.description}</em></p>
+    <p class="published-on">Published on: {frontmatter.pubDate.slice(0,10)}</p>
+    <p class="written-by">Written by {frontmatter.author}</p>
+    <p class="last-modified">Last modified: {lastModified}</p>
+    <p class="description"><em>{frontmatter.description}</em></p>
     <img src={frontmatter.image.url} alt={frontmatter.image.alt} width="300" />
     <div>
         tags:
@@ -19,5 +30,7 @@ const pageTitle = frontmatter.title;
             ))}
         </ul>
     </div>
+
+    <!-- blog post content injected below -->
     <slot />
 </BaseLayout>
